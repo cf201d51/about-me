@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Macondo+Swash+Caps|Montserrat:400,700,900|Stylish|Permanent+Marker');
+
+html {
+  height: 100%;
+}
+
 h1 {
   color: hsl(51, 100%, 20%);
   background-color: hsl(51, 100%, 50%);
@@ -15,4 +21,201 @@ nav ul li {
   margin: 10px;
   padding: 10px;
   text-shadow: 3px 3px 3px rgba(59, 59, 59, 0.473);
+}
+
+nav a {
+  color: rgb(23, 34, 70);
+}
+
+a {
+  color: rgb(14, 14, 14);
+}
+
+body {
+  margin: 0;
+  /* height: 100%; */
+  font-family: 'Montserrat', helvetica;
+  background: #ffe;
+  border: 20px solid black;
+  border-radius: 36px;
+}
+
+.marker {
+  font-family: 'Permanent Marker';
+  font-size: 40px;
+  background-color: rgba(245, 255, 158, 0.664);
+  padding: 1ex;
+  display: inline-block;
+  transform: rotate(-15deg);
+  color: #F5FF9E
+    /* z-index: -1 */
+}
+
+header {
+  font-family: 'Macondo Swash Caps', 'Montserrat', sans-serif;
+  font-size: 60px;
+  padding: 15px;
+  margin: 30px;
+  border: 15px solid black;
+  /* background: ; */
+  /* color: ; */
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.753);
+  text-align: center;
+  color: rgb(168, 158, 255);
+  background: url(../img/photo-1514562460631-0d690060d1f5.jpg) no-repeat top center
+    /*fixed*/
+  ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 9px 16px 20px 6px rgba(59, 59, 59, 0.589);
+}
+
+nav {
+  background-color: rgb(192, 192, 192);
+  font-family: 'Permanent Marker', 'Stylish', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  margin: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transform-origin: center;
+  transform: rotate(-3deg);
+  font-size: 24px;
+  text-shadow: 3px 3px 3px rgba(59, 59, 59, 0.473);
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 6px 12px 15px 1px rgba(59, 59, 59, 0.5);
+  background-color: rgb(226, 226, 226);
+}
+
+nav ul li:hover,
+nav ul li:focus-within {
+  transform: rotate(0deg);
+}
+
+nav ul li div {
+  transform-origin: center;
+  transform: rotate(-4deg);
+}
+
+nav ul li div:hover,
+nav ul li div:focus-within {
+  transform: rotate(0deg);
+}
+
+section {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+  min-height: 800px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+section p {
+  margin: 10%;
+  line-height: 1.8;
+}
+
+section img {
+  margin-top: 20px;
+  height: 220px;
+  /* width: 300px; */
+  box-shadow: 6px 12px 15px 1px rgba(59, 59, 59, 0.5);
+}
+
+footer {
+  clear: left;
+  padding: 10px;
+  background: ;
+  text-align: ;
+}
+
+article {
+  position: relative;
+  padding: 20px;
+  justify-items: center;
+  text-align: justify;
+  text-justify: auto;
+  text-shadow: 4px 8px 10px rgba(59, 59, 59, 0.5);
+  box-shadow: 9px 16px 20px 6px rgba(59, 59, 59, 0.589);
+  transition: transform 0.3s ease-in;
+}
+
+article:focus-within,
+article:hover {
+  transform: rotate(0deg);
+}
+
+article p {
+  margin-right: 0%;
+  margin-left: 0%;
+  margin-top: 5%;
+  line-height: 1.4;
+}
+
+/* article img { } */
+
+.light-article {
+  background-color: #ccc;
+  text-align: left;
+  transform-origin: center;
+  transform: rotate(-5deg);
+}
+
+/* .light-article img {
+  transform-origin: center;
+  transform: rotate(-8deg); 
+} */
+
+.dark-article {
+  background-color: #aaa;
+  text-align: right;
+  transform-origin: center;
+  transform: rotate(5deg);
+}
+
+/* .dark-article img {
+  transform-origin: center;
+  transform: rotate(8deg); 
+} */
+
+/* article h2 {
+  border: 1px solid black;
+  border-radius: 20px;
+  } */
+
+article h2 div {
+  font-family: 'Permanent Marker', 'Stylish', sans-serif;
+  text-shadow: 6px 12px 15px rgba(59, 59, 59, 0.5);
+  transform-origin: center;
+  transform: rotate(-8deg);
+  display: inline-block;
+}
+
+.z1 {
+  z-index: 1
+}
+
+.z2 {
+  z-index: 2
+}
+
+.z3 {
+  z-index: 3
 }

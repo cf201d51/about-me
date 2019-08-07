@@ -17,7 +17,7 @@
 
 ## Feature Tasks
 
-- Page content should include some include some information about me.
+- Page content should include some information about me.
 - In JavaScript prompt the user, using the `prompt()` method, for their name, and store the response in a variable in order to personalize output.
 - Use the `confirm()` method to get responses where appropriate.
 - In JavaScript use the `alert()` method to give responses to the page user.
