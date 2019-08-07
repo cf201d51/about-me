@@ -1,0 +1,18 @@
+h1 {
+  color: hsl(51, 100%, 20%);
+  background-color: hsl(51, 100%, 50%);
+}
+
+nav ul {
+  display: inline;
+  margin: 0;
+}
+
+nav ul li {
+  border: 1px solid black;
+  display: inline;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  text-shadow: 3px 3px 3px rgba(59, 59, 59, 0.473);
+}
