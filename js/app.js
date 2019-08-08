@@ -194,7 +194,7 @@ if (!correct) {
   messagePt2 = 'Places I have lived are: ';
 } else {
   messagePt1 = `Good job guessing ${guess}!`;
-  messagePt2 = 'Other correct answers could have been: ';
+  messagePt2 = 'Other correct answers would have been: ';
   userScore++;
 }
 totalQuestions++;
