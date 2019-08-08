@@ -110,7 +110,6 @@ while (guessesLeft > 0) {
 
   if (guess === secretNumber) {
     correct = true;
-    alert(`Congratulations! ${guess} was the number I was thinking of!`);
     break;
   } else if (guess > secretNumber) {
     if (guess >= lowerThan) {
@@ -136,10 +135,11 @@ while (guessesLeft > 0) {
 
 }
 
-if (!correct) {
-  alert(`Sorry.  The number I was thinking of was ${secretNumber}.`);
-} else {
+if (correct) {
+  alert(`Congratulations! ${guess} was the number I was thinking of!`);
   userScore++;
+} else {
+  alert(`Sorry.  The number I was thinking of was ${secretNumber}.`);
 }
 totalQuestions++;
 
@@ -175,7 +175,6 @@ while (guessesLeft > 0) {
   }
 
   if (correct) {
-    alert(`Congratulations! Yes, I have lived in ${guess}!`);
     break;
   } else {
     messagePt1 = `No, I have not lived in ${guess}. Sorry!`;
@@ -189,13 +188,13 @@ while (guessesLeft > 0) {
 
 }
 
-if (!correct) {
-  messagePt1 = 'Sorry.  You are out of guesses.';
-  messagePt2 = 'Places I have lived are: ';
-} else {
-  messagePt1 = `Good job guessing ${guess}!`;
+if (correct) {
+  messagePt1 = `Congratulations! Yes, I have lived in ${guess}!`;
   messagePt2 = 'Other correct answers would have been: ';
   userScore++;
+} else {
+  messagePt1 = 'Sorry.  You are out of guesses.';
+  messagePt2 = 'Places I have lived are: ';
 }
 totalQuestions++;
 
