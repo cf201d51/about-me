@@ -41,3 +41,5 @@
 - Count guesses for question six.  Limit to 4 attempts. Add 1 to correct answers iff guessed by the limit.
 - Count guesses for question seven.  Limit to 6 attempts. Add 1 to correct answers iff guessed by the limit.
 
+Driver: Avrey
+Navigator: Jonathan
