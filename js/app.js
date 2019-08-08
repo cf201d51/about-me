@@ -3,21 +3,23 @@
 var userScore = 0;
 var totalQuestions = 0;
 
-var who = prompt('What is you name?');
-console.log('who = ', who);
-alert('Hello, ' + who + '!');
+function intro() {
+  var who = prompt('What is you name?');
+  console.log('who = ', who);
+  alert('Hello, ' + who + '!');
 
-var where = prompt(who + ', what is your favorite city to visit?');
-console.log('where = ', where);
-alert('Cool ' + who + '! I also like to visit ' + where + '!');
+  var where = prompt(who + ', what is your favorite city to visit?');
+  console.log('where = ', where);
+  alert('Cool ' + who + '! I also like to visit ' + where + '!');
 
-var what = prompt('What do you like to do when visiting ' + where + ', ' + who + '?').toLowerCase();
-console.log('what = ', what);
-alert('Perhaps, ' + who + ', I might also like to ' + what + ' next time I\'m in ' + where + '.');
+  var what = prompt('What do you like to do when visiting ' + where + ', ' + who + '?').toLowerCase();
+  console.log('what = ', what);
+  alert('Perhaps, ' + who + ', I might also like to ' + what + ' next time I\'m in ' + where + '.');
 
-var when = prompt('When was the last time you did ' + what + ' while in ' + where + '?').toLowerCase();
-console.log('when = ', when);
-alert('So... ' + when + ' ' + who + ' did ' + what + ' while in ' + where + '!');
+  var when = prompt('When was the last time you did ' + what + ' while in ' + where + '?').toLowerCase();
+  console.log('when = ', when);
+  alert('So... ' + when + ' ' + who + ' did ' + what + ' while in ' + where + '!');
+}
 
 // ======================================================================
 // Five Yes/No questions...
@@ -54,174 +56,194 @@ feedbackIfIncorrect[4] = 'Sorry.  Incorrect.';
 
 totalQuestions += questions.length;
 
-for (var i = 0; i < questions.length; i++) {
-  do {
-    var response = prompt(`Please answer yes or no.\n\n${questions[i]}`);
-    response = response.toUpperCase().substr(0, 1);
-    var validResponse = (response === 'Y' || response === 'N');
-    if (!validResponse) {
-      alert('Please answer (Y/Yes) or (N/No).');
-    }
-  } while (!validResponse);
+function yesNoQuestions() {
+  for (var i = 0; i < questions.length; i++) {
+    do {
+      var response = prompt(`Please answer yes or no.\n\n${questions[i]}`);
+      response = response.toUpperCase().substr(0, 1);
+      var validResponse = (response === 'Y' || response === 'N');
+      if (!validResponse) {
+        alert('Please answer (Y/Yes) or (N/No).');
+      }
+    } while (!validResponse);
 
-  if (correctAnswers[i] === (response === 'Y')) {
-    alert(feedbackIfCorrect[i]);
-    userScore++;
-  } else {
-    alert(feedbackIfIncorrect[i]);
+    if (correctAnswers[i] === (response === 'Y')) {
+      alert(feedbackIfCorrect[i]);
+      userScore++;
+    } else {
+      alert(feedbackIfIncorrect[i]);
+    }
   }
 }
 
-// ======================================================================
-// Variables used by both question 6 and question 7 declared once here.
-var guessesLeft;
-var messagePt1;
-var messagePt2;
-var messagePt3;
-var correct;
+
 
 // ======================================================================
 // Question 6 - Guess a number.
 
-prompt('I\'m thinking of a number.  Can you guess what it is?');
-prompt('Nope!  Guess again!');
-alert('Just kidding!  Now let\'s play the real game.  I will let you know if your guess is higher or lower...');
+function question6() {
 
-var secretNumber = Math.floor(Math.random() * 10) + 1;
-var higherThan = 0;
-var lowerThan = 11;
+  var guessesLeft;
+  var messagePt1;
+  var messagePt2;
+  var messagePt3;
+  var correct;
 
-guessesLeft = 4;
-messagePt1 = 'I\'m thinking of a number form 1 to 10';
-messagePt2 = `I'll give you ${guessesLeft} guesses.`;
-messagePt3 = 'What number would you like to try?';
-correct = false;
+  prompt('I\'m thinking of a number.  Can you guess what it is?');
+  prompt('Nope!  Guess again!');
+  alert('Just kidding!  Now let\'s play the real game.  I will let you know if your guess is higher or lower...');
 
-while (guessesLeft > 0) {
+  var secretNumber = Math.floor(Math.random() * 10) + 1;
+  var higherThan = 0;
+  var lowerThan = 11;
 
-  do {
-    var guess = parseInt(prompt(`${messagePt1}\n\n${messagePt2}\n\n${messagePt3}`));
-    var valid = !isNaN(guess);
-    if (!valid) {
-      messagePt1 = 'Please enter a number.';
-    }
-  } while (!valid);
-  guessesLeft--;
+  guessesLeft = 4;
+  messagePt1 = 'I\'m thinking of a number form 1 to 10';
+  messagePt2 = `I'll give you ${guessesLeft} guesses.`;
+  messagePt3 = 'What number would you like to try?';
+  correct = false;
 
-  if (guess === secretNumber) {
-    correct = true;
-    break;
-  } else if (guess > secretNumber) {
-    if (guess >= lowerThan) {
-      messagePt1 = `Oops! I already told you that ${lowerThan} is too high!`;
-    } else {
-      messagePt1 = `Your guess of ${guess} is too high.`;
-      lowerThan = guess;
-    }
-  } else {
-    if (guess <= higherThan) {
-      messagePt1 = `Oops! I already told you that ${higherThan} is too low!`;
-    } else {
-      messagePt1 = `Your guess of ${guess} is too low.`;
-      higherThan = guess;
-    }
-  }
+  while (guessesLeft > 0) {
 
-  if (guessesLeft === 1) {
-    messagePt2 = 'You now have just 1 guess remaining!';
-  } else {
-    messagePt2 = `You now have ${guessesLeft} guesses remaining.`;
-  }
+    do {
+      var guess = parseInt(prompt(`${messagePt1}\n\n${messagePt2}\n\n${messagePt3}`));
+      var valid = !isNaN(guess);
+      if (!valid) {
+        messagePt1 = 'Please enter a number.';
+      }
+    } while (!valid);
+    guessesLeft--;
 
-}
-
-if (correct) {
-  alert(`Congratulations! ${guess} was the number I was thinking of!`);
-  userScore++;
-} else {
-  alert(`Sorry.  The number I was thinking of was ${secretNumber}.`);
-}
-totalQuestions++;
-
-// ======================================================================
-// Question 7
-
-guessesLeft = 6;
-messagePt1 = 'I have lived in three U.S. states and one Canadian province.';
-messagePt2 = `I'll give you ${guessesLeft} guesses.`;
-messagePt3 = 'Can you guess any of the states or provinces I have lived in?';
-correct = false;
-
-var question7Options = ['Washington', 'Maine', 'Illinois', 'British Columbia'];
-
-while (guessesLeft > 0) {
-
-  do {
-    var guess = prompt(`${messagePt1}\n\n${messagePt2}\n\n${messagePt3}`);
-    var valid = !!guess;
-    if (!valid) {
-      messagePt1 = 'Please enter a a guess.';
-    }
-  } while (!valid);
-  guessesLeft--;
-
-  for (var i = 0; i < question7Options.length; i++) {
-    if (guess.toUpperCase() === question7Options[i].toUpperCase()) {
+    if (guess === secretNumber) {
       correct = true;
-      // Remove correct guess from array so we list only the remaining options below.
-      question7Options.splice(i, 1);
       break;
+    } else if (guess > secretNumber) {
+      if (guess >= lowerThan) {
+        messagePt1 = `Oops! I already told you that ${lowerThan} is too high!`;
+      } else {
+        messagePt1 = `Your guess of ${guess} is too high.`;
+        lowerThan = guess;
+      }
+    } else {
+      if (guess <= higherThan) {
+        messagePt1 = `Oops! I already told you that ${higherThan} is too low!`;
+      } else {
+        messagePt1 = `Your guess of ${guess} is too low.`;
+        higherThan = guess;
+      }
     }
+
+    if (guessesLeft === 1) {
+      messagePt2 = 'You now have just 1 guess remaining!';
+    } else {
+      messagePt2 = `You now have ${guessesLeft} guesses remaining.`;
+    }
+
   }
 
   if (correct) {
-    break;
+    alert(`Congratulations! ${guess} was the number I was thinking of!`);
+    userScore++;
   } else {
-    messagePt1 = `No, I have not lived in ${guess}. Sorry!`;
+    alert(`Sorry.  The number I was thinking of was ${secretNumber}.`);
+  }
+  totalQuestions++;
   }
 
-  if (guessesLeft === 1) {
-    messagePt2 = 'You now have just 1 guess remaining!';
-  } else {
-    messagePt2 = `You now have ${guessesLeft} guesses remaining.`;
-  }
+// ======================================================================
+// Question 7
+function question7() {
+  var guessesLeft;
+  var messagePt1;
+  var messagePt2;
+  var messagePt3;
+  var correct;
 
-}
+  guessesLeft = 6;
+  messagePt1 = 'I have lived in three U.S. states and one Canadian province.';
+  messagePt2 = `I'll give you ${guessesLeft} guesses.`;
+  messagePt3 = 'Can you guess any of the states or provinces I have lived in?';
+  correct = false;
 
-if (correct) {
-  messagePt1 = `Congratulations! Yes, I have lived in ${guess}!`;
-  messagePt2 = 'Other correct answers would have been: ';
-  userScore++;
-} else {
-  messagePt1 = 'Sorry.  You are out of guesses.';
-  messagePt2 = 'Places I have lived are: ';
-}
-totalQuestions++;
+  var question7Options = ['Washington', 'Maine', 'Illinois', 'British Columbia'];
 
-messagePt3 = '';
-for (var i = 0; i < question7Options.length; i++) {
-  if (i > 0) {
-    if (i === (question7Options.length - 1)) {
-      messagePt3 += ', and ';
-    } else {
-      messagePt3 += ', ';
+  while (guessesLeft > 0) {
+
+    do {
+      var guess = prompt(`${messagePt1}\n\n${messagePt2}\n\n${messagePt3}`);
+      var valid = !!guess;
+      if (!valid) {
+        messagePt1 = 'Please enter a a guess.';
+      }
+    } while (!valid);
+    guessesLeft--;
+
+    for (var i = 0; i < question7Options.length; i++) {
+      if (guess.toUpperCase() === question7Options[i].toUpperCase()) {
+        correct = true;
+        // Remove correct guess from array so we list only the remaining options below.
+        question7Options.splice(i, 1);
+        break;
+      }
     }
-  }
-  messagePt3 += question7Options[i];
-}
 
-alert(`${messagePt1}\n\n${messagePt2}\n\n${messagePt3}.`);
+    if (correct) {
+      break;
+    } else {
+      messagePt1 = `No, I have not lived in ${guess}. Sorry!`;
+    }
+
+    if (guessesLeft === 1) {
+      messagePt2 = 'You now have just 1 guess remaining!';
+    } else {
+      messagePt2 = `You now have ${guessesLeft} guesses remaining.`;
+    }
+
+  }
+
+  if (correct) {
+    messagePt1 = `Congratulations! Yes, I have lived in ${guess}!`;
+    messagePt2 = 'Other correct answers would have been: ';
+    userScore++;
+  } else {
+    messagePt1 = 'Sorry.  You are out of guesses.';
+    messagePt2 = 'Places I have lived are: ';
+  }
+  totalQuestions++;
+
+  messagePt3 = '';
+  for (var i = 0; i < question7Options.length; i++) {
+    if (i > 0) {
+      if (i === (question7Options.length - 1)) {
+        messagePt3 += ', and ';
+      } else {
+        messagePt3 += ', ';
+      }
+    }
+    messagePt3 += question7Options[i];
+  }
+
+  alert(`${messagePt1}\n\n${messagePt2}\n\n${messagePt3}.`);
+}
 
 // ======================================================================
 // Summary
 
-var percentCorrect = userScore / totalQuestions;
-messagePt1 = `You got ${userScore} out of ${totalQuestions} correct, ${who}!`;
-if (percentCorrect < 0.67) {
-  messagePt2 = 'Better luck next time!';
-} else if (percentCorrect < 0.90) {
-  messagePt2 = 'Very good!';
-} else {
-  messagePt2 = 'You must really know me!';
-}
-alert(`${messagePt1}\n\n${messagePt2}`);
+function summary() {
+  var percentCorrect = userScore / totalQuestions;
+  messagePt1 = `You got ${userScore} out of ${totalQuestions} correct, ${who}!`;
+  if (percentCorrect < 0.67) {
+    messagePt2 = 'Better luck next time!';
+  } else if (percentCorrect < 0.90) {
+    messagePt2 = 'Very good!';
+  } else {
+    messagePt2 = 'You must really know me!';
+  }
+  alert(`${messagePt1}\n\n${messagePt2}`);
+};
+
+intro();
+yesNoQuestions();
+question6();
+question7();
+summary();
