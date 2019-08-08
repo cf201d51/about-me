@@ -36,9 +36,8 @@
 - Use the `confirm()` method to get responses where appropriate.
 - In JavaScript use the `alert()` method to give responses to the page user.
 - Use `console.log()` to clearly record the user input to the console.
-- Make DRY first!  Not using functions yet be we can use arrays.  Since the five Yes/No questions use a common structure, use an arrays for questions, answers, user responces, feedback if correct, feedback if incorrect, next if correct, and next if incorrect.
+- Make DRY first!  Not using functions yet be we can use arrays.  Since the five Yes/No questions use a common structure, use an arrays for questions, answers, user responses, feedback if correct, feedback if incorrect, next if correct, and next if incorrect.
 - Use math.random() for question six.
 - Count guesses for question six.  Limit to 4 attempts. Add 1 to correct answers iff guessed by the limit.
-- 
-- 
-- 
+- Count guesses for question seven.  Limit to 6 attempts. Add 1 to correct answers iff guessed by the limit.
+
