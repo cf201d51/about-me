@@ -148,7 +148,7 @@ function question6() {
     alert(`Sorry.  The number I was thinking of was ${secretNumber}.`);
   }
   totalQuestions++;
-  }
+}
 
 // ======================================================================
 // Question 7
@@ -240,7 +240,7 @@ function summary() {
     messagePt2 = 'You must really know me!';
   }
   alert(`${messagePt1}\n\n${messagePt2}`);
-};
+}
 
 intro();
 yesNoQuestions();
