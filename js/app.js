@@ -244,7 +244,7 @@ function summary() {
   alert(`${messagePt1}\n\n${messagePt2}`);
 }
 
-if (confirm('Would you like to play a game?')) {
+if (confirm('SHALL WE PLAY A GAME?')) {
   intro();
   yesNoQuestions();
   question6();
