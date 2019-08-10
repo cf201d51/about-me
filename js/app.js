@@ -1,10 +1,11 @@
 'use strict';
 
+var who = '';
 var userScore = 0;
 var totalQuestions = 0;
 
 function intro() {
-  var who = prompt('What is you name?');
+  who = prompt('What is you name?');
   console.log('who = ', who);
   alert('Hello, ' + who + '!');
 
@@ -231,7 +232,8 @@ function question7() {
 
 function summary() {
   var percentCorrect = userScore / totalQuestions;
-  messagePt1 = `You got ${userScore} out of ${totalQuestions} correct, ${who}!`;
+  var messagePt1 = `You got ${userScore} out of ${totalQuestions} correct, ${who}!`;
+  var messagePt2;
   if (percentCorrect < 0.67) {
     messagePt2 = 'Better luck next time!';
   } else if (percentCorrect < 0.90) {
