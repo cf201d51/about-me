@@ -244,8 +244,10 @@ function summary() {
   alert(`${messagePt1}\n\n${messagePt2}`);
 }
 
-intro();
-yesNoQuestions();
-question6();
-question7();
-summary();
+if (confirm('SHALL WE PLAY A GAME?')) {
+  intro();
+  yesNoQuestions();
+  question6();
+  question7();
+  summary();
+}
