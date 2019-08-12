@@ -30,27 +30,27 @@ var correctAnswers = [];
 var feedbackIfCorrect = [];
 var feedbackIfIncorrect = [];
 
-questions[0] = 'Q0?';
+questions[0] = 'Question 1: ?';
 correctAnswers[0] = true;
 feedbackIfCorrect[0] = 'That\'s right!';
 feedbackIfIncorrect[0] = 'Sorry.  Incorrect.';
 
-questions[1] = 'Q1?';
+questions[1] = 'Question 2: ?';
 correctAnswers[1] = false;
 feedbackIfCorrect[1] = 'That\'s right!';
 feedbackIfIncorrect[1] = 'Sorry.  Incorrect.';
 
-questions[2] = 'Q2?';
+questions[2] = 'Question 3: ?';
 correctAnswers[2] = true;
 feedbackIfCorrect[2] = 'That\'s right!';
 feedbackIfIncorrect[2] = 'Sorry.  Incorrect.';
 
-questions[3] = 'Q3?';
+questions[3] = 'Question 4: ?';
 correctAnswers[3] = false;
 feedbackIfCorrect[3] = 'That\'s right!';
 feedbackIfIncorrect[3] = 'Sorry.  Incorrect.';
 
-questions[4] = 'Q4?';
+questions[4] = 'Question 5: ?';
 correctAnswers[4] = true;
 feedbackIfCorrect[4] = 'That\'s right!';
 feedbackIfIncorrect[4] = 'Sorry.  Incorrect.';
