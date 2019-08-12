@@ -30,30 +30,30 @@ var correctAnswers = [];
 var feedbackIfCorrect = [];
 var feedbackIfIncorrect = [];
 
-questions[0] = 'Question 1: ?';
+questions[0] = 'Question 1: (Yes or No) I live in the greater Seattle area?';
 correctAnswers[0] = true;
-feedbackIfCorrect[0] = 'That\'s right!';
-feedbackIfIncorrect[0] = 'Sorry.  Incorrect.';
+feedbackIfCorrect[0] = 'That\'s right!  I live in Renton, WA.';
+feedbackIfIncorrect[0] = 'Sorry.  Incorrect.  I live in Renton, WA.';
 
-questions[1] = 'Question 2: ?';
+questions[1] = 'Question 2: (Yes or No) ? I am a vegetarian?';
 correctAnswers[1] = false;
-feedbackIfCorrect[1] = 'That\'s right!';
-feedbackIfIncorrect[1] = 'Sorry.  Incorrect.';
+feedbackIfCorrect[1] = 'That\'s right!  I\'m only a part time vegetarian.';
+feedbackIfIncorrect[1] = 'Sorry.  Incorrect.  I\'m only a part time vegetarian.';
 
-questions[2] = 'Question 3: ?';
+questions[2] = 'Question 3: (Yes or No) I am a citizen of two countries?';
 correctAnswers[2] = true;
-feedbackIfCorrect[2] = 'That\'s right!';
-feedbackIfIncorrect[2] = 'Sorry.  Incorrect.';
+feedbackIfCorrect[2] = 'That\'s right!  I was born in Canada and I am also a US citizen.';
+feedbackIfIncorrect[2] = 'Sorry.  Incorrect.  I was born in Canada and I am also a US citizen.';
 
-questions[3] = 'Question 4: ?';
-correctAnswers[3] = false;
-feedbackIfCorrect[3] = 'That\'s right!';
-feedbackIfIncorrect[3] = 'Sorry.  Incorrect.';
+questions[3] = 'Question 4: (Yes or No) I like to create electronic music?';
+correctAnswers[3] = true;
+feedbackIfCorrect[3] = 'That\'s right!  I\'m not super skilled at it, but I do enjoy it.';
+feedbackIfIncorrect[3] = 'Sorry.  Incorrect.  I\'m not super skilled at it, but I do enjoy it.';
 
-questions[4] = 'Question 5: ?';
+questions[4] = 'Question 5: (Yes or No) My brother is a professional juggler? ';
 correctAnswers[4] = true;
-feedbackIfCorrect[4] = 'That\'s right!';
-feedbackIfIncorrect[4] = 'Sorry.  Incorrect.';
+feedbackIfCorrect[4] = 'That\'s right!  He has been a member of the Flying Karamazov Brothers since 1999.';
+feedbackIfIncorrect[4] = 'Sorry.  Incorrect.  He has been a member of the Flying Karamazov Brothers since 1999.';
 
 totalQuestions += questions.length;
 
